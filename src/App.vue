@@ -1,26 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <main class="bg-gray-100">
+      <Login/>
+    </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+// Import Login Child Here
+import Login from './pages/login.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Login
   }
 }
 </script>
 
+<!-- Global Style -->
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.font-poppins{
+  font-family: 'Poppins', sans-serif;
 }
 </style>
