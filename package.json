@@ -3,15 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "concurrently \"vue-cli-service serve\" \"cd service && npm run start\"",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "backend": "cd ./service && npm run start"
   },
   "dependencies": {
+    "@auth0/auth0-vue": "^2.3.0",
     "autoprefixer": "^10",
+    "axios": "^1.4.0",
+    "bcryptjs": "^2.4.3",
     "core-js": "^3.8.3",
     "dotenv": "^16.3.1",
     "postcss": "^8",
+    "sweetalert2": "^11.7.20",
     "tailwindcss": "^3",
     "tw-elements": "^1.0.0-beta2",
     "vue": "^3.2.13",
@@ -27,6 +32,10 @@
     "eslint-plugin-vue": "^8.0.3",
     "vue-cli-plugin-tailwind": "~3.0.0"
   },
+  "browser": {
+    "crypto": false,
+    "stream": false
+  },
   "eslintConfig": {
     "root": true,
     "env": {
@@ -39,7 +48,9 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "vue/multi-word-component-names": "off"
+    }
   },
   "browserslist": [
     "> 1%",

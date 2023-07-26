@@ -1,25 +1,8 @@
 <template>
     <main class="bg-gray-100">
-      <Login/>
-        <!-- <Dashboard/> -->
+        <router-view/>
     </main>
 </template>
-
-<script>
-
-// Import Login Child Here
-import Login from './pages/login.vue'
-// import Dashboard from './pages/dashboard.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Login
-    // Dashboard
-  }
-}
-</script>
-
 <!-- Global Style -->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
