@@ -1,5 +1,7 @@
 # inventory
-
+```
+be will automatically run on npm run serve
+```
 ## Project setup
 ```
 npm install
